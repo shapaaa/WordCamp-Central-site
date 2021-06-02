@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table snapshot renders 1`] = `
+<div
+  className="Table__Container-sc-1fejw6y-0"
+>
+  <div
+    className="Table__WeekDays-sc-1fejw6y-1 gsJSkP"
+  >
+    <div
+      className="Table__Day-sc-1fejw6y-3 DpLen"
+    >
+      SUN
+    </div>
+    <div
+      className="Table__Day-sc-1fejw6y-3 DpLen"
+    >
+      MON
+    </div>
+    <div
+      className="Table__Day-sc-1fejw6y-3 DpLen"
+    >
+      TUE
+    </div>
+    <div
+      className="Table__Day-sc-1fejw6y-3 DpLen"
+    >
+      WED
+    </div>
+    <div
+      className="Table__Day-sc-1fejw6y-3 DpLen"
+    >
+      THU
+    </div>
+    <div
+      className="Table__Day-sc-1fejw6y-3 DpLen"
+    >
+      FRI
+    </div>
+    <div
+      className="Table__Day-sc-1fejw6y-3 DpLen"
+    >
+      SAT
+    </div>
+  </div>
+  <div
+    className="Table__Days-sc-1fejw6y-2 gFoNTV"
+  />
+</div>
+`;

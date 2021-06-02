@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calender snapshot renders 1`] = `
+<div
+  className="Calender__Container-awmfnn-0 hzWLTJ"
+>
+  <div
+    className="Header__Container-sc-339w09-0 dkdWWT"
+  >
+    <div
+      className="Header__Button-sc-339w09-2 dVdbEg"
+      id="left"
+      onClick={[Function]}
+    >
+      <svg
+        className="RightArrow__Icon-c5kqif-0 KvSqX"
+        data-name="Layer 1"
+        fill="#FFF"
+        viewBox="0 0 100 125"
+        width="18"
+        x="0px"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0px"
+      >
+        <title>
+          Forward
+        </title>
+        <path
+          d="M14.37,99.73a2.42,2.42,0,0,0,1.11.27,2.39,2.39,0,0,0,1.35-.42L85.88,52a2.38,2.38,0,0,0,0-3.92L16.83.42a2.39,2.39,0,0,0-3.74,2V97.62A2.38,2.38,0,0,0,14.37,99.73Z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Header__Wrapper-sc-339w09-3 jbxxmm"
+    >
+      <div
+        className="Header__Month-sc-339w09-1 lkPeOb"
+      >
+        June
+      </div>
+      <div
+        className="Header__Month-sc-339w09-1 Header__Year-sc-339w09-4 lkPeOb"
+      >
+        2021
+      </div>
+    </div>
+    <div
+      className="Header__Button-sc-339w09-2 dVdbEg"
+      id="right"
+      onClick={[Function]}
+    >
+      <svg
+        className="RightArrow__Icon-c5kqif-0"
+        data-name="Layer 1"
+        fill="#FFF"
+        viewBox="0 0 100 125"
+        width="18"
+        x="0px"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0px"
+      >
+        <title>
+          Forward
+        </title>
+        <path
+          d="M14.37,99.73a2.42,2.42,0,0,0,1.11.27,2.39,2.39,0,0,0,1.35-.42L85.88,52a2.38,2.38,0,0,0,0-3.92L16.83.42a2.39,2.39,0,0,0-3.74,2V97.62A2.38,2.38,0,0,0,14.37,99.73Z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="Table__Container-sc-1fejw6y-0"
+  >
+    <div
+      className="Table__WeekDays-sc-1fejw6y-1 gsJSkP"
+    >
+      <div
+        className="Table__Day-sc-1fejw6y-3 DpLen"
+      >
+        SUN
+      </div>
+      <div
+        className="Table__Day-sc-1fejw6y-3 DpLen"
+      >
+        MON
+      </div>
+      <div
+        className="Table__Day-sc-1fejw6y-3 DpLen"
+      >
+        TUE
+      </div>
+      <div
+        className="Table__Day-sc-1fejw6y-3 DpLen"
+      >
+        WED
+      </div>
+      <div
+        className="Table__Day-sc-1fejw6y-3 DpLen"
+      >
+        THU
+      </div>
+      <div
+        className="Table__Day-sc-1fejw6y-3 DpLen"
+      >
+        FRI
+      </div>
+      <div
+        className="Table__Day-sc-1fejw6y-3 DpLen"
+      >
+        SAT
+      </div>
+    </div>
+    <div
+      className="Table__Days-sc-1fejw6y-2 gFoNTV"
+    />
+  </div>
+</div>
+`;

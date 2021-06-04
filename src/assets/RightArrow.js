@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 const Icon = styled.svg`
+	padding-left: 2px;
 	${({ val }) =>
 		val &&
 		css`
@@ -13,9 +14,9 @@ const RightArrow = (props) => {
 			val={props.left}
 			width='18'
 			xmlns='http://www.w3.org/2000/svg'
-			fill='#FFF'
 			data-name='Layer 1'
 			viewBox='0 0 100 125'
+			fill='#7047EB'
 			x='0px'
 			y='0px'>
 			<title>Forward</title>

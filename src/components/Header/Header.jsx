@@ -3,15 +3,15 @@ import React from 'react';
 import RightArrow from '../../assets/RightArrow.js';
 
 const Container = styled.div`
-	background: linear-gradient(90deg, hsla(11, 100%, 77%, 1) 0%, hsla(22, 90%, 57%, 1) 100%);
 	display: flex;
-	height: 60px;
+	height: 80px;
+	border-bottom: 1px solid var(--light-grey);
 	justify-content: center;
 	align-items: center;
 `;
 export const Month = styled.div`
-	color: white;
-	font-size: 1.8rem;
+	color: var(--purple);
+	font-size: 2rem;
 	font-weight: 600;
 	line-height: 1.3;
 	margin: 5px;
@@ -30,7 +30,7 @@ export const Button = styled.div`
 	}
 `;
 export const Wrapper = styled.div`
-	width: 40%;
+	width: 30%;
 	display: flex;
 	justify-content: center;
 `;

@@ -13,12 +13,13 @@ const Container = styled.div`
 	z-index: -2;
 	overflow: hidden;
 `;
-const CalenderContainer = () => {
+const CalenderContainer = ({ events }) => {
 	const currentMonth = moment().month();
 	const currentYear = moment().year();
 	const months = moment.months();
 	const [month, setMonth] = useState(months[currentMonth]);
 	const [year, setYear] = useState(currentYear);
+
 	const handleLeftClick = () => {
 		const index = months.indexOf(month);
 		if (index == 0) {
@@ -41,7 +42,7 @@ const CalenderContainer = () => {
 				handleLeftClick={handleLeftClick}
 				handleRightClick={handleRightClick}
 			/>
-			<Table months={months} month={month} year={year} />
+			<Table events={events} months={months} month={month} year={year} />
 		</Container>
 	);
 };

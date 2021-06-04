@@ -2,16 +2,16 @@
 
 exports[`Header snapshot renders 1`] = `
 <div
-  className="Header__Container-sc-339w09-0 dkdWWT"
+  className="Header__Container-sc-339w09-0 qNecY"
 >
   <div
     className="Header__Button-sc-339w09-2 dVdbEg"
     id="left"
   >
     <svg
-      className="RightArrow__Icon-c5kqif-0 KvSqX"
+      className="RightArrow__Icon-c5kqif-0 euAgpW"
       data-name="Layer 1"
-      fill="#FFF"
+      fill="#7047EB"
       viewBox="0 0 100 125"
       width="18"
       x="0px"
@@ -27,13 +27,13 @@ exports[`Header snapshot renders 1`] = `
     </svg>
   </div>
   <div
-    className="Header__Wrapper-sc-339w09-3 jbxxmm"
+    className="Header__Wrapper-sc-339w09-3 dkeMoZ"
   >
     <div
-      className="Header__Month-sc-339w09-1 lkPeOb"
+      className="Header__Month-sc-339w09-1 iUdVHv"
     />
     <div
-      className="Header__Month-sc-339w09-1 Header__Year-sc-339w09-4 lkPeOb"
+      className="Header__Month-sc-339w09-1 Header__Year-sc-339w09-4 iUdVHv"
     />
   </div>
   <div
@@ -41,9 +41,9 @@ exports[`Header snapshot renders 1`] = `
     id="right"
   >
     <svg
-      className="RightArrow__Icon-c5kqif-0"
+      className="RightArrow__Icon-c5kqif-0 hmcMeF"
       data-name="Layer 1"
-      fill="#FFF"
+      fill="#7047EB"
       viewBox="0 0 100 125"
       width="18"
       x="0px"

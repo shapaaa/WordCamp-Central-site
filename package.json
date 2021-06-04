@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "jest": {
-  "testEnvironment": "jsdom"
-},
+    "testEnvironment": "jsdom"
+  },
   "scripts": {
     "start": "webpack serve --hot --open",
     "build": "webpack --config webpack.config.js --mode production",
@@ -16,8 +16,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.14.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+    "axios": "^0.21.1",
     "css-loader": "^5.2.6",
+    "html-react-parser": "^1.2.6",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -26,6 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",

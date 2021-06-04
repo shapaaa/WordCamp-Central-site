@@ -2,10 +2,10 @@
 
 exports[`Table snapshot renders 1`] = `
 <div
-  className="Table__Container-sc-1fejw6y-0"
+  className="Table__Container-sc-1fejw6y-0 eqZYRF"
 >
   <div
-    className="Table__WeekDays-sc-1fejw6y-1 gsJSkP"
+    className="Table__WeekDays-sc-1fejw6y-1 ccbHvK"
   >
     <div
       className="Table__Day-sc-1fejw6y-3 DpLen"

@@ -1,12 +1,16 @@
 import styled, { css } from 'styled-components';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import moment from 'moment';
+import Item from '../Item';
+import Modal from '../Modal';
 
-const Container = styled.div``;
+const Container = styled.div`
+	position: relative;
+`;
 const WeekDays = styled.div`
 	display: grid;
 	grid-template-columns: repeat(7, minmax(120px, 1fr));
-	border-bottom: 1px solid rgba(166, 168, 179, 0.12);
+	border-bottom: 1px solid var(--light-grey);
 `;
 const Days = styled.div`
 	display: grid;
@@ -23,33 +27,28 @@ const Day = styled.div`
 	justify-content: center;
 	align-items: center;
 `;
-const Data = styled.div`
-	border-bottom: 1px solid rgba(166, 168, 179, 0.12);
-	border-right: 1px solid rgba(166, 168, 179, 0.12);
-	font-size: 1.8rem;
-	display: flex;
-	padding-right: 20px;
-	padding-top: 20px;
-	justify-content: flex-end;
-	${({ currDay, date }) =>
-		currDay &&
-		date &&
-		currDay === date &&
-		css`
-			box-shadow: 0 0px 10px rgb(71 134 255 / 90%);
-			background: var(--blue);
-			border-radius: 8px;
-		`}
-`;
+
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const Table = (props) => {
 	const [monthDays, setMonthDays] = useState([]);
-	const { month, months, year } = props;
+	const { month, months, year, events } = props;
+	const [currEvents, setCurrEvents] = useState([]);
+	const [eventDates, setEventDates] = useState([]);
+	const [modalData, setModalData] = useState([]);
+	const [show, setShow] = useState(false);
 	const input = `${month}-${year}`;
-	const currDay = moment().day();
-	const currMonth = moment().month();
+	const currMonth = months[new Date().getMonth()];
 	const currYear = moment().year();
-	console.log(currDay);
+	const currInput = useRef(`${currMonth}-${currYear}`);
+	const getCurrentEvents = () =>
+		events.filter((event) => {
+			const time = moment.unix(event['Start Date (YYYY-mm-dd)']);
+			return months[time.month()] == month && time.year() == year;
+		});
+	const getEventDates = () =>
+		currEvents.map((e, index) => {
+			return moment.unix(e['Start Date (YYYY-mm-dd)']).date();
+		});
 	const getStartDay = () => {
 		return moment(input).startOf('month').day();
 	};
@@ -73,6 +72,24 @@ const Table = (props) => {
 		}
 		return days;
 	};
+	const handleClick = (data) => {
+		setShow(true);
+		setModalData(data);
+	};
+	const onClose = () => {
+		setShow(false);
+	};
+	useEffect(() => {
+		// console.log(currInput != input);
+		if (currInput.current != input || currEvents.length == 0) {
+			currInput.current = input;
+			setCurrEvents(getCurrentEvents());
+		}
+	}, [input, events]);
+	useEffect(() => {
+		// console.log(currEvents);
+		setEventDates(getEventDates());
+	}, [currEvents]);
 	useEffect(() => {
 		const monthdays = getDays();
 		setMonthDays(monthdays);
@@ -86,18 +103,46 @@ const Table = (props) => {
 			</WeekDays>
 			<Days>
 				{monthDays.map((d, index) => {
-					if (currYear == year && months[currMonth] == month) {
+					if (currYear == year && currMonth == month) {
 						return (
-							<Data key={index} currDay={currDay} date={index}>
-								{d}
-							</Data>
+							<Item
+								handleClick={handleClick}
+								bool={true}
+								events={currEvents}
+								dates={eventDates}
+								date={d}
+								key={index}
+								index={index}
+							/>
 						);
 					} else {
-						return <Data key={index}>{d}</Data>;
+						return (
+							<Item
+								handleClick={handleClick}
+								bool={false}
+								events={currEvents}
+								dates={eventDates}
+								date={d}
+								key={index}
+								index={index}
+							/>
+						);
 					}
 				})}
 			</Days>
+			<Modal onClose={onClose} data={modalData} show={show} />
 		</Container>
 	);
 };
+Table.defaultProps = {
+	events: [],
+	months: [],
+};
 export default Table;
+
+// <Data key={index} currDay={currDay} date={index}>
+// 	<Date>{d}</Date>
+// 	{eventDates.includes(d) ? (
+// 		<EventInfo>{currEvents[eventDates.indexOf(d)]['title'].rendered}</EventInfo>
+// 	) : null}
+// </Data>

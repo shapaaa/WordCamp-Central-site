@@ -5,7 +5,7 @@ exports[`Calender snapshot renders 1`] = `
   className="Calender__Container-awmfnn-0 hzWLTJ"
 >
   <div
-    className="Header__Container-sc-339w09-0 dkdWWT"
+    className="Header__Container-sc-339w09-0 qNecY"
   >
     <div
       className="Header__Button-sc-339w09-2 dVdbEg"
@@ -13,9 +13,9 @@ exports[`Calender snapshot renders 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="RightArrow__Icon-c5kqif-0 KvSqX"
+        className="RightArrow__Icon-c5kqif-0 euAgpW"
         data-name="Layer 1"
-        fill="#FFF"
+        fill="#7047EB"
         viewBox="0 0 100 125"
         width="18"
         x="0px"
@@ -31,15 +31,15 @@ exports[`Calender snapshot renders 1`] = `
       </svg>
     </div>
     <div
-      className="Header__Wrapper-sc-339w09-3 jbxxmm"
+      className="Header__Wrapper-sc-339w09-3 dkeMoZ"
     >
       <div
-        className="Header__Month-sc-339w09-1 lkPeOb"
+        className="Header__Month-sc-339w09-1 iUdVHv"
       >
         June
       </div>
       <div
-        className="Header__Month-sc-339w09-1 Header__Year-sc-339w09-4 lkPeOb"
+        className="Header__Month-sc-339w09-1 Header__Year-sc-339w09-4 iUdVHv"
       >
         2021
       </div>
@@ -50,9 +50,9 @@ exports[`Calender snapshot renders 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="RightArrow__Icon-c5kqif-0"
+        className="RightArrow__Icon-c5kqif-0 hmcMeF"
         data-name="Layer 1"
-        fill="#FFF"
+        fill="#7047EB"
         viewBox="0 0 100 125"
         width="18"
         x="0px"
@@ -69,10 +69,10 @@ exports[`Calender snapshot renders 1`] = `
     </div>
   </div>
   <div
-    className="Table__Container-sc-1fejw6y-0"
+    className="Table__Container-sc-1fejw6y-0 eqZYRF"
   >
     <div
-      className="Table__WeekDays-sc-1fejw6y-1 gsJSkP"
+      className="Table__WeekDays-sc-1fejw6y-1 ccbHvK"
     >
       <div
         className="Table__Day-sc-1fejw6y-3 DpLen"

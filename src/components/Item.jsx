@@ -34,11 +34,9 @@ const Date = styled.div`
 `;
 const Item = (props) => {
 	const { index, date, events, dates, bool, handleClick } = props;
-	const currDay = moment().day();
-
+	const currDay = moment().date();
 	return (
-		<Data key={index} show={currDay === index && bool}>
-			{/* {console.log(events[dates.indexOf(date)]['title'].rendered)} */}
+		<Data key={index} show={currDay === date && bool}>
 			<Date>{date}</Date>
 			{dates.includes(date) ? (
 				<EventInfo onClick={() => handleClick(events[dates.indexOf(date)])}>

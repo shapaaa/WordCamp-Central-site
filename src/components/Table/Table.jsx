@@ -80,14 +80,12 @@ const Table = (props) => {
 		setShow(false);
 	};
 	useEffect(() => {
-		// console.log(currInput != input);
 		if (currInput.current != input || currEvents.length == 0) {
 			currInput.current = input;
 			setCurrEvents(getCurrentEvents());
 		}
 	}, [input, events]);
 	useEffect(() => {
-		// console.log(currEvents);
 		setEventDates(getEventDates());
 	}, [currEvents]);
 	useEffect(() => {
@@ -103,31 +101,17 @@ const Table = (props) => {
 			</WeekDays>
 			<Days>
 				{monthDays.map((d, index) => {
-					if (currYear == year && currMonth == month) {
-						return (
-							<Item
-								handleClick={handleClick}
-								bool={true}
-								events={currEvents}
-								dates={eventDates}
-								date={d}
-								key={index}
-								index={index}
-							/>
-						);
-					} else {
-						return (
-							<Item
-								handleClick={handleClick}
-								bool={false}
-								events={currEvents}
-								dates={eventDates}
-								date={d}
-								key={index}
-								index={index}
-							/>
-						);
-					}
+					return (
+						<Item
+							handleClick={handleClick}
+							bool={currYear == year && currMonth == month}
+							events={currEvents}
+							dates={eventDates}
+							date={d}
+							key={index}
+							index={index}
+						/>
+					);
 				})}
 			</Days>
 			<Modal onClose={onClose} data={modalData} show={show} />

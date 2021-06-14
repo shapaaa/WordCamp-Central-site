@@ -4,7 +4,6 @@ import Close from '../assets/close.js';
 import Place from '../assets/place.js';
 import Clock from '../assets/clock.js';
 import moment from 'moment';
-// import parse from 'html-react-parser';
 
 const Container = styled.div`
 	position: fixed;
@@ -63,12 +62,6 @@ const EventPlace = styled.div`
 	font-size: 1.6rem;
 	font-weight: 600;
 `;
-// const Content = styled.div`
-// 	line-height: 1.2;
-// 	font-weight: 400;
-// 	font-size: 1.6rem;
-// 	padding: 0 1rem 1rem 0;
-// `;
 const A = styled('a')`
 	text-decoration: none;
 	font-size: 1.5rem;
@@ -108,4 +101,3 @@ const Modal = ({ data, show, onClose }) => {
 	);
 };
 export default Modal;
-// #fa4a29

@@ -123,3 +123,10 @@ Table.defaultProps = {
 	months: [],
 };
 export default Table;
+
+// <Data key={index} currDay={currDay} date={index}>
+// 	<Date>{d}</Date>
+// 	{eventDates.includes(d) ? (
+// 		<EventInfo>{currEvents[eventDates.indexOf(d)]['title'].rendered}</EventInfo>
+// 	) : null}
+// </Data>
